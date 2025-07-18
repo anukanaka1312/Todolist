@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 import pymysql
+import os
 pymysql.install_as_MySQLdb()
 
 
@@ -137,6 +138,8 @@ STATICFILES_DIRS = [
     BASE_DIR/'static', 
 ]
 STATIC_URL = 'static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
